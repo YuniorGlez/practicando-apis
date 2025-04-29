@@ -18,12 +18,21 @@ function printResults(results) {
     resultsDiv.innerHTML = parseStudentsToHtml(results);
 }
 
+function obtenerEstudianteFormulario() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const birthdate = document.getElementById('birthdate').value;
+    return { name, email, birthdate };
+}
+
+
 function loadAllStudents() {
     // 1. Hacer la llamada a la API para obtener todos los estudiantes
     // 2. Hacer la llamada a printResults
 }
 
 function createStudent() {
+    const estudiante = obtenerEstudianteFormulario();
     // 1. Hacer la llamada a la API para crear un nuevo estudiante
     // 2. Esperar que lleguen los resultados
     // 3. Añadir el nuevo estudiante al array de estudiantes
